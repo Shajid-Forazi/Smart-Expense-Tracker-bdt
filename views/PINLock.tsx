@@ -65,13 +65,13 @@ const PINLock: React.FC<PINLockProps> = ({ pin, onUnlock }) => {
         <div />
         <button 
           onClick={() => handlePress('0')}
-          className="aspect-square rounded-full flex items-center justify-center text-3xl font-light active:bg-[#111111] transition-colors"
+          className="aspect-square rounded-full flex items-center justify-center text-3xl font-light active:bg-[#2a7524] transition-colors"
         >
           0
         </button>
         <button 
           onClick={handleBackspace}
-          className="aspect-square rounded-full flex items-center justify-center text-3xl active:bg-[#111111] transition-colors"
+          className="aspect-square rounded-full flex items-center justify-center text-3xl active:bg-[#2a7524] transition-colors"
         >
           <Delete size={28} className="text-[#B0B0B0]" />
         </button>

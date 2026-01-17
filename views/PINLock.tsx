@@ -53,7 +53,7 @@ const PINLock: React.FC<PINLockProps> = ({ pin, onUnlock }) => {
       </div>
 
       <div className="grid grid-cols-3 gap-8 w-full max-w-xs">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (#e0dede)
           <button 
             key={num}
             onClick={() => handlePress(num.toString())}

@@ -47,7 +47,7 @@ const PINLock: React.FC<PINLockProps> = ({ pin, onUnlock }) => {
         {[0, 1, 2, 3].map((i) => (
           <div 
             key={i} 
-            className={`w-4 h-4 rounded-full border-2 transition-all ${input.length > i ? 'bg-emerald-500 border-emerald-500 scale-110' : 'border-[#333333]'} ${error ? 'bg-red-500 border-red-500 animate-pulse' : ''}`}
+            className={`w-4 h-4 rounded-full border-2 transition-all ${input.length > i ? 'bg-emerald-500 border-emerald-500 scale-110' : 'border-[#e0dede]'} ${error ? 'bg-red-500 border-red-500 animate-pulse' : ''}`}
           />
         ))}
       </div>
@@ -57,7 +57,7 @@ const PINLock: React.FC<PINLockProps> = ({ pin, onUnlock }) => {
           <button 
             key={num}
             onClick={() => handlePress(num.toString())}
-            className="aspect-square rounded-full flex items-center justify-center text-3xl font-light active:bg-[#111111] transition-colors"
+            className="aspect-square rounded-full flex items-center justify-center text-3xl font-light active:bg-[#e0dede] transition-colors"
           >
             {num}
           </button>

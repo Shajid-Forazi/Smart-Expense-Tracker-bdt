@@ -40,7 +40,7 @@ const PINLock: React.FC<PINLockProps> = ({ pin, onUnlock }) => {
           <Shield size={40} className="text-emerald-500" />
         </div>
         <h1 className="text-2xl font-bold mb-2">Secure Access</h1>
-        <p className="text-[#B0B0B0] text-sm">Enter your 4-digit PIN</p>
+        <p className="text-[#e0dede] text-sm">Enter your 4-digit PIN</p>
       </div>
 
       <div className="flex space-x-4 mb-16">
@@ -53,7 +53,7 @@ const PINLock: React.FC<PINLockProps> = ({ pin, onUnlock }) => {
       </div>
 
       <div className="grid grid-cols-3 gap-8 w-full max-w-xs">
-        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (#e0dede)
+        {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => 
           <button 
             key={num}
             onClick={() => handlePress(num.toString())}

@@ -65,7 +65,7 @@ const PINLock: React.FC<PINLockProps> = ({ pin, onUnlock }) => {
         <div />
         <button 
           onClick={() => handlePress('0')}
-          className="aspect-square rounded-full flex items-center justify-center text-3xl font-light active:bg-[#2a7524] transition-colors"
+          className="aspect-square rounded-full flex items-center justify-center text-3xl font-light active:bg-[#e0dede] transition-colors"
         >
           0
         </button>
@@ -77,7 +77,7 @@ const PINLock: React.FC<PINLockProps> = ({ pin, onUnlock }) => {
         </button>
       </div>
 
-      <div className="mt-12 text-[#333333] text-[10px] uppercase tracking-[0.2em]">
+      <div className="mt-12 text-[#e0dede] text-[10px] uppercase tracking-[0.2em]">
         Smart Expense Tracker BDT
       </div>
     </div>

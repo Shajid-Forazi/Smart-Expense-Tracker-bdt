@@ -1,6 +1,8 @@
+console.log("ENV CHECK:", import.meta.env);
+import React, { useState, useEffect, useCallback } from 'react';
+import { supabase } from "./supabase";
 
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
-import { AppState, ViewType, Transaction, Category } from './types';
+import { AppState, ViewType, Transaction } from './types';
 import { loadState, saveState } from './storage';
 import { COLORS } from './constants';
 import Dashboard from './views/Dashboard';
@@ -20,31 +22,23 @@ const App: React.FC = () => {
   const [isAuth, setIsAuth] = useState<boolean>(!state.pin);
   const [editingTransaction, setEditingTransaction] = useState<Transaction | null>(null);
 
-  // Persistence effect
+  // Persist state
   useEffect(() => {
     saveState(state);
   }, [state]);
 
+
   const handleUpdateState = useCallback((updater: (prev: AppState) => AppState) => {
-    setState(prev => {
-      const newState = updater(prev);
-      return newState;
-    });
+    setState(prev => updater(prev));
   }, []);
 
   const addTransaction = (t: Transaction) => {
-    handleUpdateState(prev => ({
-      ...prev,
-      transactions: [t, ...prev.transactions]
-    }));
+    handleUpdateState(prev => ({ ...prev, transactions: [t, ...prev.transactions] }));
     setCurrentView('DASHBOARD');
   };
 
   const deleteTransaction = (id: string) => {
-    handleUpdateState(prev => ({
-      ...prev,
-      transactions: prev.transactions.filter(t => t.id !== id)
-    }));
+    handleUpdateState(prev => ({ ...prev, transactions: prev.transactions.filter(t => t.id !== id) }));
   };
 
   const updateTransaction = (updated: Transaction) => {
@@ -144,3 +138,4 @@ const App: React.FC = () => {
 };
 
 export default App;
+

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Khoroch Kori</string>
+    <string name="title_activity_main">Khoroch Kori</string>
+    <string name="package_name">com.shajid.khorochkori</string>
+    <string name="custom_url_scheme">com.shajid.khorochkori</string>
+</resources>

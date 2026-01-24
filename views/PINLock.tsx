@@ -40,14 +40,14 @@ const PINLock: React.FC<PINLockProps> = ({ pin, onUnlock }) => {
           <Shield size={40} className="text-emerald-500" />
         </div>
         <h1 className="text-2xl font-bold mb-2">Secure Access</h1>
-        <p className="text-[#B0B0B0] text-sm">Enter your 4-digit PIN</p>
+        <p className="text-[#e0dede] text-sm">Enter your 4-digit PIN</p>
       </div>
 
       <div className="flex space-x-4 mb-16">
         {[0, 1, 2, 3].map((i) => (
           <div 
             key={i} 
-            className={`w-4 h-4 rounded-full border-2 transition-all ${input.length > i ? 'bg-emerald-500 border-emerald-500 scale-110' : 'border-[#333333]'} ${error ? 'bg-red-500 border-red-500 animate-pulse' : ''}`}
+            className={`w-4 h-4 rounded-full border-2 transition-all ${input.length > i ? 'bg-emerald-500 border-emerald-500 scale-110' : 'border-[#e0dede]'} ${error ? 'bg-red-500 border-red-500 animate-pulse' : ''}`}
           />
         ))}
       </div>
@@ -57,7 +57,7 @@ const PINLock: React.FC<PINLockProps> = ({ pin, onUnlock }) => {
           <button 
             key={num}
             onClick={() => handlePress(num.toString())}
-            className="aspect-square rounded-full flex items-center justify-center text-3xl font-light active:bg-[#111111] transition-colors"
+            className="aspect-square rounded-full flex items-center justify-center text-3xl font-light active:bg-[#e0dede] transition-colors"
           >
             {num}
           </button>
@@ -65,19 +65,19 @@ const PINLock: React.FC<PINLockProps> = ({ pin, onUnlock }) => {
         <div />
         <button 
           onClick={() => handlePress('0')}
-          className="aspect-square rounded-full flex items-center justify-center text-3xl font-light active:bg-[#111111] transition-colors"
+          className="aspect-square rounded-full flex items-center justify-center text-3xl font-light active:bg-[#e0dede] transition-colors"
         >
           0
         </button>
         <button 
           onClick={handleBackspace}
-          className="aspect-square rounded-full flex items-center justify-center text-3xl active:bg-[#111111] transition-colors"
+          className="aspect-square rounded-full flex items-center justify-center text-3xl active:bg-[#2a7524] transition-colors"
         >
           <Delete size={28} className="text-[#B0B0B0]" />
         </button>
       </div>
 
-      <div className="mt-12 text-[#333333] text-[10px] uppercase tracking-[0.2em]">
+      <div className="mt-12 text-[#e0dede] text-[10px] uppercase tracking-[0.2em]">
         Smart Expense Tracker BDT
       </div>
     </div>
